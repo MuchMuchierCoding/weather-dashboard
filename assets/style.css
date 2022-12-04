@@ -1,8 +1,12 @@
 body {
     background-color: #D5E6DC;
+    display: flex;
+    flex-direction: column;
+    justify-items: auto;
 }
 
 .dashboardHead {
+    flex-wrap: wrap;
     background-color: #7F9299;
     max-width: 100%;
 }
@@ -19,6 +23,7 @@ h1 {
 .asideContainer {
     background-color: #90997F;
     max-width: 20%;
+    
 }
 
 h2 {
@@ -33,15 +38,23 @@ h2 {
     padding-bottom: 4%;
 }
 
-.searchBtn {
-    
+.searchBtn 
+[type='button'],
+[type='reset'],
+[type='submit'],{
+    -webkit-appearance:button;
+    color: white;
 }
 
 .bodyMain {
     border: 1px solid black;
-    width: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
     background-color: #7F9299;
     color: white;
+    margin-left: 25%;
 }
 
 
