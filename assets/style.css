@@ -38,13 +38,6 @@ h2 {
     padding-bottom: 4%;
 }
 
-.searchBtn 
-[type='button'],
-[type='reset'],
-[type='submit'],{
-    -webkit-appearance:button;
-    color: white;
-}
 
 .bodyMain {
     border: 1px solid black;
@@ -52,10 +45,11 @@ h2 {
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: #7F9299;
+    background-color: #A8D5E6;
     color: white;
     margin-left: 25%;
 }
+
 
 
 

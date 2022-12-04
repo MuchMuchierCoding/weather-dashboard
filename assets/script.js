@@ -1,3 +1,8 @@
+var searchEl = document.querySelector('citySelect');
+var searchResultEl = document.querySelector('searchResults');
+var searchForecastEl = document.querySelector('fiveDayForecast');
+
+
 
 
 
