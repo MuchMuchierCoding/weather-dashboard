@@ -52,7 +52,7 @@ function currentWeather(lat,lon) {
         var timeStampEl = document.createElement("p")
         timeStampEl.textContent = "Date: " + timeStamp
         var iconEl = document.createElement("img")
-        iconEl.setAttribute("src", "http://openweathermap.org/img/wn/"+icon+"@2x.png")
+        iconEl.setAttribute("src", "https://openweathermap.org/img/wn/"+icon+"@2x.png")
         var tempEl = document.createElement("p")
         tempEl.textContent = "Temperature: " + temp + " Degrees Farhenheit"
         var windEl = document.createElement("p")
@@ -79,7 +79,7 @@ function fiveDayWeather(lat,lon) {
 
             var iconFive = data.list[i].weather[0].icon
             iconFiveEl = document.createElement("img")
-            iconFiveEl.setAttribute("src", "http://openweathermap.org/img/wn/"+iconFive+"@2x.png")
+            iconFiveEl.setAttribute("src", "https://openweathermap.org/img/wn/"+iconFive+"@2x.png")
 
             var tempFive = data.list[i].main.temp
             tempFiveEl = document.createElement("p")
