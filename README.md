@@ -1,6 +1,6 @@
 # weather-dashboard
 
-[Weather-Dashboard](url) is a weather dashboard that uses third-party APIs to run dynamically updated HTML and CSS. 
+[Weather-Dashboard](https://amandapaul1223.github.io/weather-dashboard/) is a weather dashboard that uses third-party APIs to run dynamically updated HTML and CSS. 
 
 ## Description
 
