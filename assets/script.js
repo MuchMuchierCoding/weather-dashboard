@@ -48,17 +48,17 @@ function currentWeather(lat,lon) {
         var wind = data.wind.speed
         var humidity = data.main.humidity
         var cityEl = document.createElement("p")
-        cityEl.textContent = city
+        cityEl.textContent = "City Name: " + city
         var timeStampEl = document.createElement("p")
-        timeStampEl.textContent = timeStamp
+        timeStampEl.textContent = "Date: " + timeStamp
         var iconEl = document.createElement("img")
         iconEl.setAttribute("src", "http://openweathermap.org/img/wn/"+icon+"@2x.png")
         var tempEl = document.createElement("p")
-        tempEl.textContent = temp
+        tempEl.textContent = "Temperature: " + temp + " Degrees Farhenheit"
         var windEl = document.createElement("p")
-        windEl.textContent = wind
+        windEl.textContent = "Wind Speed: " + wind + " mph"
         var humidityEl = document.createElement("p")
-        humidityEl.textContent = humidity
+        humidityEl.textContent = "Humidity Index: " + humidity + "%"
         searchResultEl.append(cityEl, timeStampEl, iconEl, tempEl, windEl, humidityEl)
     })
 }
@@ -75,7 +75,7 @@ function fiveDayWeather(lat,lon) {
         for (var i=0; i<data.list.length; i+=8) {
             var timeStampFive = dayjs.unix(data.list[i].dt).format("MM/DD/YYYY")
             timeStampFiveEl = document.createElement("p")
-            timeStampFiveEl.textContent = timeStampFive
+            timeStampFiveEl.textContent = "Date: " + timeStampFive
 
             var iconFive = data.list[i].weather[0].icon
             iconFiveEl = document.createElement("img")
@@ -83,15 +83,15 @@ function fiveDayWeather(lat,lon) {
 
             var tempFive = data.list[i].main.temp
             tempFiveEl = document.createElement("p")
-            tempFiveEl.textContent = tempFive
+            tempFiveEl.textContent = "Temperature: " + tempFive + " Degrees Farhenheit"
 
             var windFive = data.list[i].wind.speed
             windFiveEl = document.createElement("p")
-            windFiveEl.textContent = windFive
+            windFiveEl.textContent ="Wind Speed: " + windFive + " mph"
             
             var humidityFive = data.list[i].main.humidity
             humidityFiveEl = document.createElement("p")
-            humidityFiveEl.textContent = humidityFive
+            humidityFiveEl.textContent = "Humidity Index: " + humidityFive + "%"
 
             searchForecastEl.append(timeStampFiveEl, iconFiveEl, tempFiveEl, windFiveEl, humidityFiveEl)
         
@@ -103,8 +103,10 @@ function fiveDayWeather(lat,lon) {
 displayCityLog()
 
 
-
-
+window.onunload = () => {
+    //clear the local storage
+    localStorage.clear()
+};
 
 
 
