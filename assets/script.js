@@ -21,7 +21,7 @@ function mainSearch(event) {
     cityLog.push(city)
     localStorage.setItem("cityLog", JSON.stringify(cityLog))
     displayCityLog()
-    var url = "http://api.openweathermap.org/geo/1.0/direct?q="+city+"&appid="+api 
+    var url = "https://api.openweathermap.org/geo/1.0/direct?q="+city+"&appid="+api 
     fetch(url)
     .then(function(response){
         return response.json()
@@ -65,7 +65,7 @@ function currentWeather(lat,lon) {
 userSearchBtn.addEventListener('click', mainSearch) 
 
 function fiveDayWeather(lat,lon) {
-    var url = "http://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&appid="+api+"&units=imperial"
+    var url = "https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&appid="+api+"&units=imperial"
     fetch(url)
     .then(function(response) {
         return response.json()
